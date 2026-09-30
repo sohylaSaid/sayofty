@@ -1,0 +1,2648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 23rd Birthday ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #090507;
+
+    color: white;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+button,
+input {
+
+    font-family: inherit;
+}
+
+
+button {
+    border: none;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(177, 62, 92, .18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(101, 40, 75, .20),
+            transparent 35%
+        ),
+
+        #090507;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+#stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -5;
+
+    pointer-events: none;
+}
+
+
+.star {
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: .3;
+
+    animation:
+        twinkle
+        3s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+@keyframes twinkle {
+
+    from {
+        opacity: .1;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: .8;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+#hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 50;
+}
+
+
+.floating-heart {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    color: #efa7b6;
+
+    opacity: .5;
+
+    animation:
+        floatHeart
+        linear
+        forwards;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .5;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   TOP PROGRESS
+========================================================= */
+
+#progress {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    height: 3px;
+
+    width: 0%;
+
+    z-index: 99999;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a94d67,
+            #efa7b6,
+            #e5c08a
+        );
+
+    transition:
+        width .6s ease;
+}
+
+
+/* =========================================================
+   SCREENS
+========================================================= */
+
+.screen {
+
+    min-height: 100vh;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        90px 20px;
+
+    position: relative;
+}
+
+
+.screen.active {
+
+    display: flex;
+
+    animation:
+        screenEnter
+        .8s
+        ease;
+}
+
+
+@keyframes screenEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.content {
+
+    width:
+        min(950px, 94%);
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.tiny-label {
+
+    color: #bc7c8e;
+
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+.opening {
+
+    width:
+        min(950px, 95%);
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.opening-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            65px,
+            11vw,
+            125px
+        );
+
+    line-height: .78;
+
+    font-weight: 500;
+
+    margin-top: 10px;
+}
+
+
+.opening-title .number {
+
+    display: block;
+
+    font-size:
+        clamp(
+            120px,
+            20vw,
+            210px
+        );
+
+    color: #efa7b6;
+
+    line-height: .7;
+
+    text-shadow:
+        0 0 80px
+        rgba(239,167,182,.15);
+}
+
+
+.opening-title em {
+
+    color: #e5c08a;
+
+    font-weight: 400;
+}
+
+
+.opening-description {
+
+    max-width: 560px;
+
+    margin:
+        40px auto 0;
+
+    color: #a7979d;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+.opening-description strong {
+
+    color: #efa7b6;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   WISH
+========================================================= */
+
+.wish-area {
+
+    width:
+        min(500px, 100%);
+
+    margin:
+        45px auto 0;
+}
+
+
+.wish-label {
+
+    color: #d99aaa;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+.wish-input {
+
+    width: 100%;
+
+    padding:
+        17px 22px;
+
+    border:
+        1px solid
+        rgba(239,167,182,.25);
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: white;
+
+    border-radius: 50px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    transition: .35s;
+}
+
+
+.wish-input:focus {
+
+    border-color:
+        rgba(239,167,182,.75);
+
+    box-shadow:
+        0 0 30px
+        rgba(239,167,182,.08);
+}
+
+
+.wish-input::placeholder {
+
+    color: #63575c;
+}
+
+
+.wish-button {
+
+    margin-top: 15px;
+
+    padding:
+        14px 30px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #efa7b6,
+            #bd637c
+        );
+
+    color: #220e15;
+
+    font-weight: 600;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: .35s;
+}
+
+
+.wish-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(239,167,182,.18);
+}
+
+
+.wish-error {
+
+    min-height: 20px;
+
+    margin-top: 10px;
+
+    color: #dc778e;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CANDLES
+========================================================= */
+
+.candles-area {
+
+    display: none;
+
+    margin-top: 45px;
+}
+
+
+.candles-area.show {
+
+    display: block;
+
+    animation:
+        candleAreaIn
+        .8s
+        ease;
+}
+
+
+@keyframes candleAreaIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.counter-number {
+
+    display: block;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 65px;
+
+    line-height: .8;
+
+    color: #efa7b6;
+}
+
+
+.counter-label {
+
+    color: #74656b;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.candle-instruction {
+
+    color: #a7979d;
+
+    font-size: 12px;
+
+    margin-top: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   CANDLE GRID
+========================================================= */
+
+.candles {
+
+    width:
+        min(760px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, 1fr);
+
+    gap:
+        15px 9px;
+
+    align-items: end;
+
+    justify-items: center;
+}
+
+
+.birthday-candle {
+
+    width: 18px;
+
+    height: 72px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s;
+}
+
+
+.birthday-candle:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+.candle-stick {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 14px;
+
+    height: 53px;
+
+    border-radius:
+        4px 4px 2px 2px;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #f7d9df 0px,
+            #f7d9df 6px,
+            #a85a70 6px,
+            #a85a70 10px
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.3);
+}
+
+
+.candle-flame {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: -2px;
+
+    transform:
+        translateX(-50%);
+
+    width: 17px;
+
+    height: 26px;
+
+    background:
+        radial-gradient(
+            circle at 50% 70%,
+            #fff4b0 0 20%,
+            #ffb44e 45%,
+            #ed6b6b 70%,
+            transparent 72%
+        );
+
+    border-radius: 50%;
+
+    filter:
+        drop-shadow(
+            0 0 10px #ffad45
+        );
+
+    animation:
+        flameMove
+        .55s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+@keyframes flameMove {
+
+    from {
+
+        transform:
+            translateX(-50%)
+            scaleY(1)
+            rotate(-3deg);
+    }
+
+    to {
+
+        transform:
+            translateX(-50%)
+            scaleY(.82)
+            rotate(3deg);
+    }
+}
+
+
+.birthday-candle.blown {
+
+    cursor: default;
+}
+
+
+.birthday-candle.blown
+.candle-flame {
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(.1);
+
+    animation: none;
+
+    transition:
+        .45s ease;
+}
+
+
+.birthday-candle.blown
+.candle-stick {
+
+    opacity: .35;
+
+    transition: .4s;
+}
+
+
+/* =========================================================
+   CANDLE PROGRESS
+========================================================= */
+
+.birthday-progress {
+
+    width:
+        min(500px, 90%);
+
+    height: 3px;
+
+    margin:
+        35px auto 12px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+#candleProgress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #bd637c,
+            #efa7b6,
+            #e5c08a
+        );
+
+    transition:
+        width .4s ease;
+}
+
+
+.candle-hint {
+
+    color: #68595f;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   UNLOCKED
+========================================================= */
+
+.birthday-unlocked {
+
+    display: none;
+
+    margin-top: 45px;
+}
+
+
+.birthday-unlocked.show {
+
+    display: block;
+
+    animation:
+        unlockedIn
+        1s
+        ease;
+}
+
+
+@keyframes unlockedIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.75);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+.celebration-symbols {
+
+    color: #e5c08a;
+
+    letter-spacing: 12px;
+
+    font-size: 20px;
+}
+
+
+.unlocked-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 105px;
+
+    line-height: .8;
+
+    color: #efa7b6;
+
+    margin:
+        15px 0;
+}
+
+
+.birthday-unlocked h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(40px, 7vw, 65px);
+
+    font-weight: 500;
+}
+
+
+.birthday-unlocked p {
+
+    color: #9d8c92;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin:
+        20px auto 30px;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope-final {
+
+    width: 190px;
+
+    height: 125px;
+
+    position: relative;
+
+    margin:
+        35px auto 20px;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+
+.envelope-final:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(-2deg);
+}
+
+
+.final-envelope-body {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #692b3e,
+            #2b1019
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    box-shadow:
+        0 25px 60px
+        rgba(0,0,0,.5);
+}
+
+
+.final-envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        95px solid transparent;
+
+    border-right:
+        95px solid transparent;
+
+    border-top:
+        63px solid #8b3e55;
+}
+
+
+.final-envelope-heart {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    color: #f2adbc;
+
+    font-size: 38px;
+
+    z-index: 2;
+}
+
+
+.envelope-label {
+
+    color: #d99aaa;
+
+    letter-spacing: 4px;
+
+    font-size: 9px;
+
+    animation:
+        pulseText
+        2s
+        infinite;
+}
+
+
+@keyframes pulseText {
+
+    50% {
+        opacity: .4;
+    }
+}
+
+
+/* =========================================================
+   GENERAL TITLES
+========================================================= */
+
+.section-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            60px,
+            10vw,
+            100px
+        );
+
+    line-height: .85;
+
+    font-weight: 500;
+}
+
+
+.section-title span {
+
+    display: block;
+
+    color: #efa7b6;
+
+    font-style: italic;
+}
+
+
+.section-description {
+
+    max-width: 560px;
+
+    margin:
+        35px auto;
+
+    color: #9e9096;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+========================================================= */
+
+.next-button {
+
+    margin-top: 35px;
+
+    padding:
+        15px 30px;
+
+    border:
+        1px solid
+        rgba(239,167,182,.4);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    opacity: 1;
+}
+
+
+.next-button:hover:not(:disabled) {
+
+    background: #efa7b6;
+
+    color: #19090f;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(239,167,182,.15);
+}
+
+
+/*
+   IMPORTANT:
+   Disabled button cannot be clicked.
+*/
+
+.next-button:disabled {
+
+    opacity: .35;
+
+    cursor: not-allowed;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-box {
+
+    width:
+        min(680px, 100%);
+
+    margin:
+        45px auto 0;
+
+    padding: 45px;
+
+    background:
+        rgba(255,255,255,.025);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius: 15px;
+
+    backdrop-filter:
+        blur(20px);
+}
+
+
+.quiz-number {
+
+    color: #bd788a;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+.quiz-question {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    margin-bottom: 30px;
+}
+
+
+.answers {
+
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.answer {
+
+    padding:
+        17px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    background:
+        rgba(255,255,255,.015);
+
+    border-radius: 8px;
+
+    color: #d7cdd1;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: .3s;
+}
+
+
+.answer:hover {
+
+    transform:
+        translateX(5px);
+
+    border-color:
+        rgba(239,167,182,.5);
+
+    background:
+        rgba(239,167,182,.05);
+}
+
+
+.answer.correct {
+
+    border-color:
+        #8fc69e;
+
+    background:
+        rgba(91,159,111,.1);
+}
+
+
+.answer.wrong {
+
+    border-color:
+        #cc687d;
+
+    background:
+        rgba(204,104,125,.1);
+
+    animation:
+        shake
+        .35s;
+}
+
+
+@keyframes shake {
+
+    25% {
+        transform:
+            translateX(-7px);
+    }
+
+    50% {
+        transform:
+            translateX(7px);
+    }
+
+    75% {
+        transform:
+            translateX(-4px);
+    }
+}
+
+
+.quiz-message {
+
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    color: #e5a6b5;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MEMORY FILM
+========================================================= */
+.memory-film{width:min(950px,100%);margin:45px auto 25px;position:relative;overflow:hidden;padding:28px 0;border:1px solid rgba(239,167,182,.16);border-radius:18px;background:rgba(10,5,8,.72);box-shadow:0 25px 70px rgba(0,0,0,.4),inset 0 0 40px rgba(239,167,182,.03)}
+.memory-film:before,.memory-film:after{content:"";position:absolute;left:0;right:0;height:12px;z-index:6;background:repeating-linear-gradient(90deg,transparent 0 18px,rgba(255,255,255,.10) 18px 30px);pointer-events:none}.memory-film:before{top:8px}.memory-film:after{bottom:8px}
+.film-window{width:min(850px,88%);margin:auto;overflow:hidden;border:1px solid rgba(255,255,255,.10);border-radius:12px;position:relative}.film-track{display:flex;width:max-content;animation:filmMove 28s linear infinite}.film-frame{width:260px;height:360px;flex:0 0 260px;padding:9px;background:#171014;border-right:1px solid rgba(255,255,255,.08)}.film-frame img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.78);transition:.4s}.film-frame:hover img{filter:brightness(1)}
+@keyframes filmMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}.film-caption{margin-top:18px;color:#75666c;font-size:10px;letter-spacing:3px;text-transform:uppercase}.memory-heart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:8}.hidden-heart{color:#ffb5c4;font-size:42px;text-shadow:0 0 25px #e5849c;animation:heartbeat 1.5s infinite;cursor:pointer;transition:.5s}.hidden-heart:hover{color:white;transform:scale(1.3)}.hidden-heart.found{color:#ff6f91;animation:none;transform:scale(1.5)}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-container {
+
+    width:
+        min(850px, 100%);
+
+    margin:
+        45px auto;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 12px;
+
+    background: #030203;
+}
+
+
+.video-container video {
+
+    width: 100%;
+
+    max-height: 600px;
+
+    display: block;
+}
+
+
+.video-note {
+
+    padding: 18px;
+
+    color: #9d8d92;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   REASONS · FLIP CARDS
+========================================================= */
+.reasons{width:min(900px,100%);margin:45px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.reason-card{height:250px;perspective:1000px;cursor:pointer}.reason-inner{position:relative;width:100%;height:100%;transition:transform .75s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}.reason-card.flipped .reason-inner{transform:rotateY(180deg)}.reason-front,.reason-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid rgba(255,255,255,.09);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:25px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.25)}.reason-front{overflow:hidden}.reason-front:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(239,167,182,.08),transparent 55%);pointer-events:none}.reason-back{transform:rotateY(180deg);border-color:rgba(239,167,182,.3)}.reason-number{color:#c8778c;font-family:"Cormorant Garamond",serif;font-size:48px}.reason-front h3{font-family:"Cormorant Garamond",serif;font-size:25px;margin:8px 0 12px}.flip-hint{color:#75666c;font-size:9px;letter-spacing:3px;text-transform:uppercase}.reason-message{width:100%;min-height:90px;color:#b8aaaf;font-size:13px;line-height:1.8;outline:none}.reason-message:empty:before{content:"Write your message here...";color:#5d5157;font-style:italic}.reason-last{color:#efa7b6;font-family:"Cormorant Garamond",serif;font-size:27px;margin-bottom:12px}.reason-last-note{color:#75666c;font-size:10px;letter-spacing:2px}
+
+/* =========================================================
+   CELEBRATION
+========================================================= */
+
+.celebration-card {
+
+    width:
+        min(800px, 100%);
+
+    margin:
+        45px auto;
+
+    padding:
+        60px 40px;
+
+    border:
+        1px solid
+        rgba(229,192,138,.2);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(229,192,138,.05),
+            rgba(255,255,255,.02)
+        );
+
+    border-radius: 15px;
+}
+
+
+.celebration-icon {
+
+    font-size: 60px;
+
+    color: #e5c08a;
+
+    animation:
+        heartbeat
+        2s
+        infinite;
+}
+
+
+.celebration-date {
+
+    color: #d8b47a;
+
+    letter-spacing: 5px;
+
+    font-size: 9px;
+
+    margin:
+        25px 0 15px;
+}
+
+
+.celebration-card h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 65px);
+
+    font-weight: 500;
+}
+
+
+.celebration-card p {
+
+    max-width: 600px;
+
+    margin:
+        25px auto;
+
+    color: #aaa0a3;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+}
+
+
+.download-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding:
+        15px 25px;
+
+    border-radius: 50px;
+
+    background: #e5c08a;
+
+    color: #24170b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .35s;
+}
+
+
+.download-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(229,192,138,.2);
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter {
+
+    width:
+        min(750px, 100%);
+
+    margin:
+        45px auto;
+
+    padding:
+        60px 50px;
+
+    text-align: left;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    background:
+        rgba(255,255,255,.025);
+
+    border-radius: 10px;
+}
+
+
+.letter h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 50px;
+
+    margin-bottom: 30px;
+}
+
+
+.letter p {
+
+    color: #b8aaaf;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+
+.signature {
+
+    margin-top: 40px;
+
+    color: #efa7b6;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            70px,
+            12vw,
+            145px
+        );
+
+    line-height: .8;
+
+    font-weight: 500;
+}
+
+
+.final-title span {
+
+    display: block;
+
+    color: #efa7b6;
+
+    font-style: italic;
+}
+
+
+.final-subtitle {
+
+    margin-top: 40px;
+
+    color: #817279;
+
+    font-size: 9px;
+
+    letter-spacing: 5px;
+
+    line-height: 2;
+}
+
+
+.final-heart {
+
+    margin-top: 45px;
+
+    font-size: 70px;
+
+    color: #efa7b6;
+
+    animation:
+        heartbeat
+        1.5s
+        infinite;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px) {
+
+    .candles {
+
+        grid-template-columns:
+            repeat(8, 1fr);
+
+        gap:
+            14px 7px;
+    }
+
+
+    .birthday-candle {
+
+        transform:
+            scale(.85);
+    }
+
+
+    .birthday-candle:hover {
+
+        transform:
+            translateY(-5px)
+            scale(.9);
+    }
+
+
+    .opening-title {
+
+        font-size: 65px;
+    }
+
+
+    .opening-title .number {
+
+        font-size: 125px;
+    }
+
+
+    .quiz-box {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .quiz-question {
+
+        font-size: 32px;
+    }
+
+
+    .reasons {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .celebration-card {
+
+        padding:
+            45px 20px;
+    }
+
+
+    .letter {
+
+        padding:
+            40px 25px;
+    }
+
+
+    .letter h2 {
+
+        font-size: 42px;
+    }
+
+
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background"></div>
+
+<div id="stars"></div>
+
+<div id="hearts"></div>
+
+<div id="progress"></div>
+
+
+
+<!-- =====================================================
+     SCREEN 1
+===================================================== -->
+
+<section
+    class="screen active"
+    id="screen1"
+>
+
+    <div class="opening">
+
+        <div class="tiny-label">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+
+        <h1 class="opening-title">
+
+            <span class="number">
+                23
+            </span>
+
+            candles.
+
+            <br>
+
+            <em>23 years.</em>
+
+        </h1>
+
+
+        <p class="opening-description">
+
+            Before you enter this little world
+            I made for you...
+
+            <br><br>
+
+            <strong>
+                make a wish.
+            </strong>
+
+            <br>
+
+            Then blow out all 23 candles,
+            one for every year that brought
+            you here.
+
+        </p>
+
+
+        <!-- WISH -->
+
+        <div
+            class="wish-area"
+            id="wishArea"
+        >
+
+            <div class="wish-label">
+                ✦ MAKE YOUR BIRTHDAY WISH ✦
+            </div>
+
+
+            <input
+                id="wishInput"
+                class="wish-input"
+                type="text"
+                maxlength="100"
+                placeholder="Type your wish here..."
+                autocomplete="off"
+            >
+
+
+            <button
+                class="wish-button"
+                onclick="startBirthday()"
+            >
+                Make my wish ♡
+            </button>
+
+
+            <div
+                class="wish-error"
+                id="wishError"
+            ></div>
+
+        </div>
+
+
+        <!-- CANDLES -->
+
+        <div
+            class="candles-area"
+            id="candlesArea"
+        >
+
+            <span
+                class="counter-number"
+                id="candlesLeft"
+            >
+                23
+            </span>
+
+
+            <span class="counter-label">
+                candles left
+            </span>
+
+
+            <p class="candle-instruction">
+
+                🕯️ Click each candle to blow it out
+
+            </p>
+
+
+            <div
+                class="candles"
+                id="candles"
+            ></div>
+
+
+            <div class="birthday-progress">
+
+                <div
+                    id="candleProgress"
+                ></div>
+
+            </div>
+
+
+            <p
+                class="candle-hint"
+                id="candleHint"
+            >
+                Your birthday journey begins...
+            </p>
+
+        </div>
+
+
+        <!-- UNLOCKED -->
+
+        <div
+            class="birthday-unlocked"
+            id="birthdayUnlocked"
+        >
+
+            <div class="celebration-symbols">
+                ✦ ♥ ✦ ♥ ✦
+            </div>
+
+
+            <div class="unlocked-number">
+                23
+            </div>
+
+
+            <h2>
+                Your wish is made.
+            </h2>
+
+
+            <p>
+
+                You blew out all 23 candles.
+
+                <br>
+
+                Now it's my turn to give you
+                a little surprise.
+
+            </p>
+
+
+            <div
+                class="envelope-final"
+                onclick="openBirthdayEnvelope()"
+            >
+
+                <div class="final-envelope-body"></div>
+
+                <div class="final-envelope-flap"></div>
+
+                <div class="final-envelope-heart">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <div class="envelope-label">
+
+                OPEN YOUR BIRTHDAY SURPRISE
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 2
+     QUIZ
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen2"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            LEVEL 01 · OUR STORY
+        </div>
+
+
+        <h1 class="section-title">
+
+            Let's see...
+
+            <span>
+                how well you know us.
+            </span>
+
+        </h1>
+
+
+        <p class="section-description">
+
+            You made your wish.
+
+            You blew out 23 candles.
+
+            <br>
+
+            Now let's see if you can unlock
+            the next part. 👀
+
+        </p>
+
+
+        <div class="quiz-box">
+
+            <div class="quiz-number">
+                QUESTION 01
+            </div>
+
+
+            <div class="quiz-question">
+
+                What is my favorite
+                thing about you?
+
+            </div>
+
+
+            <div class="answers">
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz(this, false)"
+                >
+                    Your money 😂
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz(this, true)"
+                >
+                    The way you make me
+                    feel loved ❤️
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz(this, false)"
+                >
+                    Your ability to annoy me 😭
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz(this, false)"
+                >
+                    Your food choices
+                </button>
+
+            </div>
+
+
+            <div
+                class="quiz-message"
+                id="quizMessage"
+            ></div>
+
+
+            <button
+                class="next-button"
+                id="quizNext"
+                disabled
+                onclick="goTo(3)"
+            >
+                You know me ♡ →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 3 · MEMORY FILM
+===================================================== -->
+<section class="screen" id="screen3">
+    <div class="content">
+        <div class="tiny-label">LEVEL 02 · MEMORY HUNT</div>
+        <h1 class="section-title">Our little <span>film of us.</span></h1>
+        <p class="section-description">Let the memories move by, one after another.<br>There is a little heart hidden somewhere inside. ❤️</p>
+        <div class="memory-film">
+            <div class="film-window">
+                <div class="film-track">
+                    <div class="film-frame">
+                        <img src="images/photo_2026-09-30_23-51-20.jpg" alt="Memory 1">
+                    </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-37.jpg" alt="Memory 2">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-45.jpg" alt="Memory 3">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-52.jpg" alt="Memory 4">
+                </div><div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-58.jpg" alt="Memory 5">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-52-04.jpg" alt="Memory 6">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-20.jpg" alt="Memory 1 again">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-37.jpg" alt="Memory 2 again">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-45.jpg" alt="Memory 3 again">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-52.jpg" alt="Memory 4 again">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-51-58.jpg" alt="Memory 5 again">
+                </div>
+                <div class="film-frame">
+                    <img src="images/photo_2026-09-30_23-52-04.jpg" alt="Memory 6 again">
+                </div>
+            </div>
+        </div>
+        <div class="memory-heart">
+            <div class="hidden-heart" id="hiddenHeart" onclick="findHeart()">♡</div></div><div class="film-caption">MOVING MEMORIES · ONE AFTER ANOTHER · JUST US</div></div><p class="candle-hint" id="memoryHint">🔍 Find the hidden heart...</p><button class="next-button" id="memoryNext" disabled onclick="goTo(4)">Memory unlocked →</button></div></section>
+
+
+<!-- =====================================================
+     SCREEN 4
+     VIDEO
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen4"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            LEVEL 03 · A PIECE OF US
+        </div>
+
+
+        <h1 class="section-title">
+
+            Press
+
+            <span>
+                play.
+            </span>
+
+        </h1>
+
+
+        <p class="section-description">
+
+            Some memories deserve
+            to be replayed forever.
+
+        </p>
+
+
+        <div class="video-container">
+
+            <video
+                id="ourVideo"
+                controls
+                playsinline
+                poster="images/video-cover.jpg"
+                onended="videoFinished()"
+            >
+
+                <source
+                    src="images/video_2026-09-30_23-55-30.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support
+                the video element.
+
+            </video>
+
+
+            <div class="video-note">
+
+                "My favorite place is wherever
+                you are."
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="next-button"
+            id="videoNext"
+            onclick="goTo(5)"
+        >
+            Continue our story →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 5
+     SECOND QUIZ
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen5"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            LEVEL 04 · ONE MORE QUESTION
+        </div>
+
+
+        <h1 class="section-title">
+
+            One last
+
+            <span>
+                question.
+            </span>
+
+        </h1>
+
+
+        <div class="quiz-box">
+
+            <div class="quiz-number">
+                QUESTION 02
+            </div>
+
+
+            <div class="quiz-question">
+
+                What do I want most
+                for your birthday?
+
+            </div>
+
+
+            <div class="answers">
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz2(this, false)"
+                >
+                    A new car 🚗
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz2(this, false)"
+                >
+                    A million dollars 💰
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz2(this, true)"
+                >
+                    To see you happy ❤️
+                </button>
+
+
+                <button
+                    class="answer"
+                    onclick="answerQuiz2(this, false)"
+                >
+                    For you to stop stealing
+                    my food 😂
+                </button>
+
+            </div>
+
+
+            <div
+                class="quiz-message"
+                id="quizMessage2"
+            ></div>
+
+
+            <button
+                class="next-button"
+                id="quizNext2"
+                disabled
+                onclick="goTo(6)"
+            >
+                Correct ♡ →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 6 · REASONS
+===================================================== -->
+<section class="screen" id="screen6">
+  <div class="content">
+    <div class="tiny-label">LEVEL 05 · LITTLE THINGS</div>
+    <h1 class="section-title">Reasons I <span>love you.</span></h1>
+    <p class="section-description">Flip every little reason. The last one is the one I really wanted you to read. ♡</p>
+    <div class="reasons">
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">01</div><h3>A little reason</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-message">I tried to find one perfect reason… but honestly, there are too many. So this is me cheating already. 😂</div></div></div></div>
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">02</div><h3>Another reason</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-message">Because somehow you can annoy me, make me laugh, and make me miss you… sometimes in the same five minutes. 😭❤️</div></div></div></div>
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">03</div><h3>A secret reason</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-message">Because even the most random little moments with you somehow become memories I want to keep forever.</div></div></div></div>
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">04</div><h3>A forever reason</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-message">Because you feel like home to me. Not a place… just that calm feeling of knowing I am exactly where I want to be.</div></div></div></div>
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">05</div><h3>One more reason</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-message">Because I genuinely love watching you grow, dream, succeed, and become more of the person you are meant to be. I am always going to be proud of you.</div></div></div></div>
+      <div class="reason-card" onclick="flipReason(this)"><div class="reason-inner"><div class="reason-front"><div class="reason-number">06</div><h3>Flip me last</h3><div class="flip-hint">CLICK TO FLIP · ♡</div></div><div class="reason-back"><div class="reason-last">The one I couldn't explain ♡</div><div class="reason-message">I kept trying to find one final reason that could somehow explain why I love you this much… and I couldn't. Maybe because it isn't one thing. It is your laugh, your voice, your kindness, your silly side, the way you make ordinary days feel special, and the way being with you just feels right. So if you ever ask me why I love you, my answer will always be: I just do. And I hope I get to keep choosing you, loving you, laughing with you, and making memories with you for a very, very long time. Happy 23rd, my love. ❤️</div><div class="reason-last-note">THIS ONE WAS ALWAYS FOR YOU</div></div></div>
+    </div>
+    <button class="next-button" onclick="goTo(7)">There's more... →</button>
+  </div>
+</section>
+
+<!-- =====================================================
+     SCREEN 7
+     CELEBRATION PDF
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen7"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            LEVEL 06 · YOUR SURPRISE
+        </div>
+
+
+        <h1 class="section-title">
+
+            I prepared
+
+            <span>
+                something for us.
+            </span>
+
+        </h1>
+
+
+        <div class="celebration-card">
+
+            <div class="celebration-icon">
+                ♡
+            </div>
+
+
+            <div class="celebration-date">
+                OUR SPECIAL DAY
+            </div>
+
+
+            <h2>
+                Celebration Day
+            </h2>
+
+
+            <p>
+
+                A little plan.
+
+                <br>
+
+                A little surprise.
+
+                <br>
+
+                A whole day for us.
+
+                <br><br>
+
+                Everything you need
+                to know is inside.
+
+            </p>
+
+
+            <button class="download-button" type="button" onclick="showNotYet()">↓ &nbsp; Download our day</button>
+
+        </div>
+
+
+        <button
+            class="next-button"
+            onclick="goTo(8)"
+        >
+            I got it ♡ →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 8
+     LOVE LETTER
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen8"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            FINAL LEVEL
+        </div>
+
+
+        <h1 class="section-title">
+
+            A letter
+
+            <span>
+                for you.
+            </span>
+
+        </h1>
+
+
+        <div class="letter">
+
+            <h2>
+                My love,
+            </h2>
+
+
+            <p>
+
+                I don't think there will ever be
+                enough words to explain how much
+                you mean to me.
+
+            </p>
+
+
+            <p>
+
+                You became one of those people
+                who make ordinary days feel special.
+
+                The conversations,
+                the laughs,
+                the silly moments,
+                and even the little arguments...
+
+                I wouldn't trade any of them.
+
+            </p>
+
+
+            <p>
+
+                Today I just want you to know
+                that I'm proud of you.
+
+                I'm happy to see you grow,
+                dream, achieve,
+                and become the person
+                you're meant to be.
+
+            </p>
+
+
+            <p>
+
+                And selfishly...
+
+                I hope I get to be beside you
+                through many more birthdays,
+                adventures,
+                celebrations,
+                and ordinary days.
+
+            </p>
+
+
+            <p>
+
+                Happy 23rd birthday
+                to my favorite person.
+
+                <br><br>
+
+                I love you more than this little
+                website could ever explain.
+
+            </p>
+
+
+            <div class="signature">
+
+                Forever yours, ♡
+
+                <br>
+
+                Sohyla
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="next-button"
+            onclick="goTo(9)"
+        >
+            One final surprise →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCREEN 9
+===================================================== -->
+
+<section
+    class="screen"
+    id="screen9"
+>
+
+    <div class="content">
+
+        <div class="tiny-label">
+            YOU MADE IT
+        </div>
+
+
+        <h1 class="final-title">
+
+            Happy 23rd,
+
+            <span>
+                My Love.
+            </span>
+
+        </h1>
+
+
+        <p class="final-subtitle">
+
+            23 YEARS OF YOU
+
+            <br><br>
+
+            AND I HOPE I GET TO SEE
+            MANY MORE
+
+        </p>
+
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+
+        <p
+            style="
+                margin-top:35px;
+                color:#9b858c;
+                line-height:2;
+            "
+        >
+
+            Here's to another year
+            of laughter,
+
+            <br>
+
+            adventures,
+
+            <br>
+
+            dreams,
+
+            <br>
+
+            and memories
+
+            <br>
+
+            <strong style="color:#efa7b6">
+                together.
+            </strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script>
+let currentScreen=1,candlesBlown=0,quizSolved=false,quiz2Solved=false,memorySolved=false,videoSolved=false;
+const TOTAL_SCREENS=9;
+const EMAILS=['sohyla2003said@gmail.com','saif.m.elnagar86@gmail.com'];
+const FORM_ENDPOINT='https://formsubmit.co/ajax/'+EMAILS[0];
+
+window.addEventListener('load',()=>{createStars();setInterval(createFloatingHeart,1200);});
+
+function createStars(){const c=document.getElementById('stars');for(let i=0;i<120;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';c.appendChild(s);}}
+function createFloatingHeart(){const c=document.getElementById('hearts'),h=document.createElement('div');h.className='floating-heart';h.innerHTML=Math.random()>.5?'♡':'♥';h.style.left=Math.random()*100+'%';h.style.fontSize=10+Math.random()*18+'px';const d=7+Math.random()*7;h.style.animationDuration=d+'s';c.appendChild(h);setTimeout(()=>h.remove(),d*1000);}
+
+function startMusic(){const m=document.getElementById('backgroundMusic');if(!m)return;m.volume=.35;m.play().catch(()=>{});}
+
+async function sendWish(wish){
+  const payload={wish,_subject:"Saif's Birthday Wish ♡",_template:'table',_captcha:'false',_cc:EMAILS[1],_replyto:EMAILS[0]};
+  try{
+    const response=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    if(!response.ok)throw new Error('Email request failed');
+    localStorage.setItem('wishEmailSent','true');
+  }catch(err){
+    console.warn('FormSubmit failed. This usually means the FormSubmit endpoint still needs activation or the browser blocked the request.',err);
+    // Do not navigate away from the birthday website. The wish is still saved locally.
+    localStorage.setItem('wishEmailPending',wish);
+  }
+}
+
+function startBirthday(){
+  startMusic();
+  const input=document.getElementById('wishInput'),error=document.getElementById('wishError'),wish=input.value.trim();
+  if(!wish){error.innerText='Make a wish first... ♡';input.focus();return;}
+  localStorage.setItem('birthdayWish',wish);error.innerText='Sending your secret wish… ♡';
+  sendWish(wish);
+  setTimeout(()=>{error.innerText='Wish saved. Now… blow out the candles. 🕯️';},700);
+  document.getElementById('wishArea').style.display='none';document.getElementById('candlesArea').classList.add('show');create23Candles();createBurst();
+}
+
+function create23Candles(){const c=document.getElementById('candles');c.innerHTML='';candlesBlown=0;for(let i=23;i>=1;i--){const candle=document.createElement('div');candle.className='birthday-candle';candle.dataset.number=i;candle.innerHTML='<div class="candle-flame"></div><div class="candle-stick"></div>';candle.addEventListener('click',()=>blowCandle(candle));c.appendChild(candle);}}
+function blowCandle(c){if(c.classList.contains('blown'))return;c.classList.add('blown');candlesBlown++;const remaining=23-candlesBlown;document.getElementById('candlesLeft').innerText=remaining;document.getElementById('candleProgress').style.width=(candlesBlown/23*100)+'%';updateCandleMessage(remaining);createSmallBurst();if(candlesBlown===23)allCandlesBlown();}
+function updateCandleMessage(r){const h=document.getElementById('candleHint');if(r>20)h.innerText='The first few... 🕯️';else if(r>15)h.innerText='Keep going, birthday boy... ✨';else if(r>10)h.innerText="You're halfway there ❤️";else if(r>5)h.innerText='Your surprise is getting closer... 👀';else if(r>2)h.innerText='Almost there... 🥹';else if(r===2)h.innerText='Two more candles...';else if(r===1)h.innerText='One final candle. Make it count. ❤️';}
+function allCandlesBlown(){document.getElementById('candleHint').innerText='23 candles. 23 years. One wish. ✨';createHugeCelebration();setTimeout(()=>{document.getElementById('candlesArea').style.display='none';document.getElementById('birthdayUnlocked').classList.add('show');},1000);}
+function openBirthdayEnvelope(){startMusic();createHugeCelebration();setTimeout(()=>goTo(2),700);}
+
+function goTo(number){const next=document.getElementById('screen'+number);if(!next)return;startMusic();document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));next.classList.add('active');currentScreen=number;updateProgress();window.scrollTo({top:0,behavior:'smooth'});if(number!==10)createBurst();}
+function updateProgress(){const p=document.getElementById('progress');p.style.width=currentScreen===10?'0%':((currentScreen-1)/(TOTAL_SCREENS-1)*100)+'%';}
+
+function answerQuiz(el,correct){if(quizSolved)return;if(correct){el.classList.add('correct');quizSolved=true;document.getElementById('quizMessage').innerText='Of course you know that. ❤️';document.getElementById('quizNext').disabled=false;createBurst();}else{el.classList.remove('wrong');void el.offsetWidth;el.classList.add('wrong');document.getElementById('quizMessage').innerText='Hmm... not quite 😏 Try again.';}}
+function findHeart(){if(memorySolved)return;memorySolved=true;const heart=document.getElementById('hiddenHeart');heart.innerHTML='♥';heart.classList.add('found');document.getElementById('memoryHint').innerText='You found it. ❤️ Memory unlocked!';document.getElementById('memoryNext').disabled=false;createHugeCelebration();}
+function videoFinished(){videoSolved=true;document.getElementById('videoNext').disabled=false;createBurst();}
+function answerQuiz2(el,correct){if(quiz2Solved)return;if(correct){el.classList.add('correct');quiz2Solved=true;document.getElementById('quizMessage2').innerText='Exactly. I just want to see you happy. ❤️';document.getElementById('quizNext2').disabled=false;createBurst();}else{el.classList.remove('wrong');void el.offsetWidth;el.classList.add('wrong');document.getElementById('quizMessage2').innerText='Nope 😂 Try again.';}}
+function flipReason(card){if(card)card.classList.toggle('flipped');}
+
+function showNotYet(){startMusic();goTo(10);}
+function goBackFromNotYet(){goTo(7);}
+
+function createSmallBurst(){for(let i=0;i<7;i++){const p=document.createElement('div');p.innerHTML=Math.random()>.5?'♥':'✦';p.style.position='fixed';p.style.left='50%';p.style.top='50%';p.style.zIndex='9999';p.style.pointerEvents='none';p.style.color='#efa7b6';p.style.fontSize=10+Math.random()*15+'px';document.body.appendChild(p);const a=Math.random()*Math.PI*2,d=40+Math.random()*100,x=Math.cos(a)*d,y=Math.sin(a)*d;p.animate([{transform:'translate(-50%,-50%) scale(0)',opacity:1},{transform:`translate(${x}px,${y}px) scale(1)`,opacity:0}],{duration:700+Math.random()*500,easing:'ease-out'});setTimeout(()=>p.remove(),1500);}}
+function createBurst(){for(let i=0;i<18;i++){const p=document.createElement('div');p.innerHTML=Math.random()>.5?'♥':'♡';p.style.position='fixed';p.style.left='50%';p.style.top='50%';p.style.zIndex='9999';p.style.pointerEvents='none';p.style.color='#efa7b6';p.style.fontSize=12+Math.random()*20+'px';document.body.appendChild(p);const a=Math.random()*Math.PI*2,d=70+Math.random()*230,x=Math.cos(a)*d,y=Math.sin(a)*d;p.animate([{transform:'translate(-50%,-50%) scale(0)',opacity:1},{transform:`translate(${x}px,${y}px) scale(1)`,opacity:0}],{duration:900+Math.random()*700,easing:'ease-out'});setTimeout(()=>p.remove(),1800);}}
+function createHugeCelebration(){for(let i=0;i<55;i++){const p=document.createElement('div');p.innerHTML=Math.random()>.5?'♥':'✦';p.style.position='fixed';p.style.left='50%';p.style.top='50%';p.style.zIndex='99999';p.style.pointerEvents='none';p.style.color=Math.random()>.5?'#efa7b6':'#e5c08a';p.style.fontSize=10+Math.random()*25+'px';document.body.appendChild(p);const a=Math.random()*Math.PI*2,d=100+Math.random()*450,x=Math.cos(a)*d,y=Math.sin(a)*d;p.animate([{transform:'translate(-50%,-50%) scale(0)',opacity:1},{transform:`translate(${x}px,${y}px) scale(1.2)`,opacity:0}],{duration:1000+Math.random()*1200,easing:'cubic-bezier(.2,.8,.2,1)'});setTimeout(()=>p.remove(),2400);}}
+
+document.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const a=document.activeElement;if(a===document.getElementById('wishInput')){startBirthday();return;}const b=document.querySelector('.screen.active .next-button:not(:disabled)');if(b)b.click();});
+</script>
+</body>
+</html>
